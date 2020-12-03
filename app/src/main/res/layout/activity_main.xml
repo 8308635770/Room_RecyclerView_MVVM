@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+ <androidx.recyclerview.widget.RecyclerView
+     android:id="@+id/recycler_view_note_item"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:padding="8dp"
+     android:layout_marginBottom="100dp"
+     tools:listitem="@layout/note_item"
+     android:background="@android:color/darker_gray"/>
+
+ <androidx.coordinatorlayout.widget.CoordinatorLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/recycler_view_note_item">
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/btn_insert_note"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|end"
+      android:layout_margin="10dp"
+      android:src="@drawable/ic_add"/>
+
+
+
+ </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
